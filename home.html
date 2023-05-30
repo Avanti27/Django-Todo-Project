@@ -1,0 +1,57 @@
+<html>
+     <head>
+           <title>BLOG|home</title>
+     </head>
+     <body>
+        <h1><em>Django template language</em></h1> 
+        <!--Value of a is: {{a}}<br>
+        List  is: {{l}}<br>
+        Tuple  is: {{t}}<br>
+        Set  is: {{s}}<br>-->
+        <!--{% if x > 0 %}
+        <h1>It is Positive Number</h1>
+        {% else %}
+        <h1>It is a Negative Number</h1>
+        {% endif %} -->
+
+      {% comment %}
+        {% if x > y and x > z %}
+        <h1>{{x}} is Greater</h1>
+        {% elif y > x and y > z  %}
+        <h1>{{y}} is Greater</h1>
+        {% else %}
+        <h1>{{z}} is Greater</h1>
+        {% endif %}
+      {% endcomment %}
+      {% comment %}
+      {{d}}<br>
+      Accessing Elements separately <br>
+      {% for key,value in d.items %}
+          {{key}}&nbsp;&nbsp;{{value}} <br>
+      {% endfor %}
+      {% endcomment %}
+
+      <table border="1" align="center">
+           <tr>
+                 <th>KEYS</th>
+                 <th>VALUES</th>
+           </tr>
+           {% for x,y in d.items %}
+           <tr>
+                 <td>{{x}}</td>
+                 <td>{{y}}</td>
+           </tr>
+            {% endfor %}
+
+
+      </table>
+        
+
+
+     </body>
+
+
+
+
+
+</html>

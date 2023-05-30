@@ -1,0 +1,38 @@
+<html>
+     <head>
+           <title>BLOG|home</title>
+     </head>
+     <body>
+         <h2>CREATE BLOG</h2>
+        <form method="POST" action="/store">
+            {% csrf_token %}
+            <table border="1" align="center">
+                <tr>
+                       <td>Heading:</td>
+                       <td><input type="text" name="bhead"/></td>
+                </tr>
+
+                <tr>
+                       <td>Category:</td>
+                       <td><input type="text" name="bcat"/></td>
+                </tr>
+
+                <tr>
+                    <td>Description:</td>
+                       
+                    <td><textarea name="bdes" cols="30" rows="10"></textarea></td>
+                </tr>
+
+                <tr>
+                      
+                       <td><input type="submit" name="send" value="POST"/></td>
+                </tr>
+       </table>
+
+
+        </form>  
+        
+
+
+     </body>
+</html>

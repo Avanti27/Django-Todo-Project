@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block data %}
+<h1 align="center"><em>Admin Dashboard for Course</em></h1>
+<div style="text-align:center">
+<font size="80px">    
+<a href="/course">Create Course</a>
+</font>
+</div>
+
+<table border="2" align="center" bordercolor="black" bgcolor=#ABEBC6>
+       <tr>
+             <th>Course Name:</th>
+             <th>Course Duration(HRS):</th>
+             <th>Course Price:</th>
+             <th>Edit</th>
+             <th>Delete</th>
+       </tr>
+       
+
+        {% for d in data %}
+           <tr>
+                <td>{{d.cname}}</td>
+                <td>{{d.cdur}}</td>
+                <td>{{d.cprice}}</td>
+                <td><a href="/edit/{{d.id}}">Edit</a></td>
+                <td><a href="/delete/{{d.id}}">Delete</a></td>
+             </tr>
+        {% endfor %}        
+
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block data %}
+
+        <form method="POST" action="/create_course">
+            {% csrf_token %}
+            <table align="center">
+                <tr>
+                       <td>Course Name::</td>
+                       <td><input type="text" name="cname"/></td>
+                </tr>
+
+                <tr>
+                       <td>Course Duration(HRS):</td>
+                       <td><input type="text" name="cdur" /></td>
+                </tr>
+
+                <tr>
+                    <td>Course Price:</td>   
+                    <td><input type="text" name="cprice"/></td>
+                </tr>
+
+                <tr>
+                      
+                       <td><input type="submit" name="send" value="Create Coure"/></td>
+                </tr>
+       </table>
+       
+
+
+        </form>  
+        
+        {% endblock data %}

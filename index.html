@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block data %}
+
+<h1>In Index File</h1>
+<h2>Name is : {{name}}</h2>
+<h3>Length is : {{name|length}}</h3>
+<h3>Name in uppercase is : {{name|upper}}</h3>
+<h3>The current date is : {{cdt}}</h3>
+<p>{{cdt|date:"d/m/y"}}</p>
+<p>{{cdt|date:"D/F/Y"}}</p>
+<p>{{cdt|date:"d/F/Y"}}</p>
+
+<img src="{% static 'images/facebook.png' %}" alt="">
+
+{% endblock %}
